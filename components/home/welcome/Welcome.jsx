@@ -1,5 +1,6 @@
 // welcome page 
 
+// imports
 import { useState } from 'react';
 import { 
   View, 
@@ -14,11 +15,13 @@ import {useRouter} from 'expo-router';
 import styles from './welcome.style'
 import { icons, SIZES } from '../../../constants';
 
-const drinks = ["Long Island Iced Tea", "Old Fashioned", "Margarita"]
+// definitions
+const drinks = ["Browse our menu", "Concoct your drink"]
 
+// welcome page function
 const Welcome = () => {
   const router = useRouter();
-  const [activeDrinkType, setActiveDrinkType] = useState("Long Island Iced Tea")
+  const [activeDrinkType, setActiveDrinkType] = useState("Browse our menu")
 
   return (
     <View>

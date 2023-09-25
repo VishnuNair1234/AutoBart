@@ -3,7 +3,7 @@ import { View, ScrollView, SafeAreaView } from 'react-native';
 import {Stack, useRouter} from 'expo-router';
 
 import {COLORS, icons, images, SIZES} from '../constants';
-import {ScreenHeaderBtn, SreenHeaderBtn, Welcome} from '../components';
+import {ScreenHeaderBtn, SreenHeaderBtn, Welcome, Drinks} from '../components';
 import { ColorSpace } from 'react-native-reanimated';
 
 const Home = () => {
@@ -32,6 +32,7 @@ const Home = () => {
                     }}
                 >
                     <Welcome/>
+                    <Drinks/>
                 </View>
             </ScrollView>
         </SafeAreaView>

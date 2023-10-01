@@ -5,6 +5,7 @@ import styles from './drinks.style'
 import {useRouter} from 'expo-router'
 import {COLORS, SIZES} from '../../../constants'
 import DrinksCard from '../../common/cards/drinks/DrinksCard'
+import drinksList from './catalog'
 
 const Drinks = () => {
   const router = useRouter();
@@ -27,7 +28,7 @@ const Drinks = () => {
           <Text>Something went wrong</Text>
         ) : (
           <FlatList
-            data= {[1, 2, 3, 4, 5, 6, 7, 8]}
+            data= {drinksList}
             renderItem = {(item) => (
               <TouchableOpacity>
                 <DrinksCard

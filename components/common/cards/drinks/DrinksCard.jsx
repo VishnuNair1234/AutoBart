@@ -1,14 +1,26 @@
 import React from 'react'
-import { View, Text } from 'react-native'
-
+import { View, Text, TouchableOpacity} from 'react-native'
+import drinksList from '../../../home/menu/catalog'
 import styles from './drinkscard.style'
 
 const DrinksCard = () => {
+  const handleDrinkPress = (drinkName) => {
+    console.log(`Selected Drink: ${drinkName}`);
+  };
+
   return (
     <View>
-      <Text>DrinksCard</Text>
+      {drinksList.map((drink, index) => (
+        <TouchableOpacity
+          key={index}
+          onPress={() => handleDrinkPress(drink.name)}
+          style={{ padding: 10, borderBottomWidth: 1, borderBottomColor: '#ccc' }}
+        >
+          <Text>{drink.name}</Text>
+        </TouchableOpacity>
+      ))}
     </View>
-  )
-}
+  );
+};
 
-export default DrinksCard
+export default DrinksCard;

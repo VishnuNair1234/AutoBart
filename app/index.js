@@ -4,6 +4,7 @@ import {Stack, useRouter} from 'expo-router';
 
 import {COLORS, icons, images, SIZES} from '../constants';
 import {ScreenHeaderBtn, SreenHeaderBtn, Welcome, Drinks} from '../components';
+// import {UseFetch} from '../hook/UseFetch.js';
 import { ColorSpace } from 'react-native-reanimated';
 
 const Home = () => {
@@ -33,6 +34,7 @@ const Home = () => {
                 >
                     <Welcome/>
                     <Drinks/>
+                    {/*<UseFetch/> */}
                 </View>
             </ScrollView>
         </SafeAreaView>

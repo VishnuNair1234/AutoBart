@@ -27,19 +27,7 @@ const Drinks = () => {
         ) : error ? (
           <Text>Something went wrong</Text>
         ) : (
-          <FlatList
-            data= {drinksList}
-            renderItem = {(item) => (
-              <TouchableOpacity>
-                <DrinksCard
-                  item={item}
-                />
-              </TouchableOpacity>
-            )}
-            keyExtractor={item => item?.drink_id}
-            contentContainerStyle={{ columnGap: SIZES.medium}}
-            horizontal
-          />
+          <DrinksCard horizontal/>
         )}
       </View>
     </View>

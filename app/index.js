@@ -34,7 +34,6 @@ const Home = () => {
                 >
                     <Welcome/>
                     <Drinks/>
-                    {/*<UseFetch/> */}
                 </View>
             </ScrollView>
         </SafeAreaView>
